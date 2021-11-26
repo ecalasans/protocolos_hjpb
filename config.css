@@ -1,0 +1,27 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* Classes acessórias */
+
+.titulo-protocolo {
+    @apply font-cinzel-decorative text-center mx-auto py-2 mx-auto text-8xl text-azul-medio;
+}
+
+.subtitulo {
+    @apply font-cinzel-decorative text-6xl text-azul-medio;
+}
+
+.paragrafo-comum{
+    @apply mt-8 mx-16 font-roboto text-4xl text-justify text-marrom leading-relaxed;
+}
+
+li {
+    @apply text-justify leading-normal;
+}
+
+.botao-calculadora {
+    @apply font-bold text-white bg-azul-medio text-4xl p-4 rounded-md hover:bg-white hover:text-azul-medio border border-azul-medio;
+}

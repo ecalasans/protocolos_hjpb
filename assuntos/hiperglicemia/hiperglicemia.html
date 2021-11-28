@@ -304,13 +304,16 @@ hiperglicemia de rebote.</span>
                         </div>
                         <p class="font-roboto text-center text-xl ">Figura 2 - Uso da Insulina</p>
                     </div>
-
+                    <p class="paragrafo-comum">
+                        <span class="pl-16">A insulina regular (100 UI/mL) geralmente é diluída em solução salina normal para uma
+concentração de 0,1 UI/mL.  No entanto, para efeitos de administração em prematuros, podemos rediluir para uma concentração de 0,01U/mL.</span>
+                    </p>
                     <!-- CALCULADORA DE INSULINA-->
                     <div class="flex flex-col mt-4 mx-24 pb-2 justify-center">
                         <div>
                             <p class="font-roboto font-bold text-marrom text-center text-4xl">Calculadora de Insulina</p>
                         </div>
-                        <div class="flex flex-col bg-brancof2 p-4 mx-auto justify-start">
+                        <div class="flex flex-col bg-brancof2 p-4 mx-16 justify-start">
                             <div class="grid grid-rows-2 mx-auto mt-2">
                                 <div class="flex flex-row justify-items-start pb-4">
                                     <label for="peso_hipergl" class="font-roboto text-left text-marrom text-4xl mr-4">Peso:</label>
@@ -318,29 +321,25 @@ hiperglicemia de rebote.</span>
                                     <p class="font-roboto text-marrom text-4xl justify-start ml-2">g</p>
                                 </div>
                                 <div class="flex flex-row justify-items-start pb-4">
-                                    <label for="insul_hipergl" class="font-roboto text-right text-marrom text-4xl mr-4">Dose:</label>
-                                    <input id="insul_hipergl" name="peso_hipergl" size="7" type="decimal" class="font-roboto text-4xl text-azul-medio text-left">
+                                    <label for="insul_hipergl" class="font-roboto text-left text-marrom text-4xl mr-4">Dose:</label>
+                                    <input id="insul_hipergl" name="peso_hipergl" size="7" type="decimal" class="font-roboto text-4xl text-azul-medio text-right">
                                     <p class="font-roboto text-marrom text-4xl ml-2">U/Kg</p>
                                 </div>
                             </div>
                             <div class="mt-8">
                                 <p class="font-roboto text-marrom text-center text-4xl">
-                                    <span class="font-bold">Insulina Regular:</span>  diluir 1mL + 99mL SF 0,9%
+                                    <span class="font-bold">Insulina Regular:</span>  diluir 0,1mL + 10mL SF 0,9%.  Retirar 1mL + 99mL SF 0,9%.
                                 </p>
                                 <p class="pt-4 font-roboto text-marrom text-center text-4xl">
-                                    <span class="font-bold text-azul-medio text-4xl">0,0mL/h</span> EV em BI.
+                                    <span id="vel_infusao" class="font-bold text-azul-medio text-4xl">0,0mL/h</span> EV em BI.
                                 </p>
                             </div>
                             <div class="mx-24 flex justify-between mt-8">
-                                <button id="btn_calc_insulina" type="button" class="botao-calculadora">Calcular</button>
-                                <button id="btn_limp_insulina" type="button" class="botao-calculadora">Limpar</button>
+                                <button id="btn_calc_insulina" type="button" class="botao-calculadora" onclick="calcular();">Calcular</button>
+                                <button id="btn_limp_insulina" type="button" class="botao-calculadora" onclick="limpar();">Limpar</button>
                             </div>
                         </div>
                     </div>
-                    <p class="paragrafo-comum">
-                        <span class="pl-16">A insulina regular (100 UI/mL) geralmente é diluída em solução salina normal para uma
-concentração de 0,1 UI/mL.</span>
-                    </p>
                     <p class="paragrafo-comum">
                         <span class="pl-16">Para evitar aderência da insulina ao tubo plástico dos equipos de infusão EV, esses devem
 ser preenchidos pelo menos 20 minutos antes da infusão. Trocar circuitos e solução a cada 24 h.</span>
@@ -400,5 +399,6 @@ monitorização dos níveis de potássio.</span>
             }
         )
     </script>
+    <script src="hiperglicemia.js"></script>
 </body>
 </html>
